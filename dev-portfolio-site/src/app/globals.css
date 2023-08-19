@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Rubik&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+::selection{
+  background-color: #5D3D87;
+  color:#F5F4EB;
+}
+
+body {
+  background-color: #F5F4EB;
+  color:#5D3D87;
+  overflow-x: hidden;
+  font-size: 2rem;
+  font-family: "Archivo", sans-serif;
+}
+
+h1{
+  font-family: 'Instrument Serif';
+  font-weight: normal;
+  font-size: 6rem;
+}
