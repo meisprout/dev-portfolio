@@ -1,0 +1,106 @@
+/*mobile-first*/
+
+.logo{
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+    margin:1rem 0;
+  }
+
+  .header, .nav{
+    align-items: center;
+  }
+
+  .header{
+    display: flex;
+    height:20vw;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 3px solid #5D3D87;
+    position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #F5F4EB;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .nav a{
+    margin-left: 2rem;
+  }
+
+  .hero{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:20rem 4rem;
+  text-align: center;
+  height:100vh;
+  background: radial-gradient(50% 50% at 50% 50%, #e2cbff 0%, #F5F4EB 100%);
+  }
+
+  .hero p{
+    margin-top: 2rem;
+  }
+
+  .skills{
+    text-align: center;
+    padding:10rem 4rem;
+  }
+
+  .skills-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F4EB;
+    color: #5D3D87;
+    margin:2rem;
+    padding:2rem;
+    border: 3px solid #5D3D87;
+    border-radius: 2rem;
+  }
+
+  .skills-div h3{
+    font-style: italic;
+    margin: 1rem 0;
+  }
+
+  .skills-icons{
+    position: relative;
+    width: 50vw;
+    height:50vh;
+  }
+
+@media only screen and (min-width:600px) {
+    .header{
+      height:15vh;
+    }
+
+    .hero p{
+      padding:0 20rem;
+    }
+
+
+    .logo{
+      position: relative;
+      width: 40vh;
+      height: 10vh;
+      margin:1rem 0;
+    }
+    .nav{
+        display: block;
+    }
+
+    .skills-divcontainer{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .skills-icons{
+      width: 20vw;
+    }
+}
