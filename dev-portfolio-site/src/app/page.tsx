@@ -7,6 +7,8 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useLayoutEffect, useRef } from 'react'
 import React from 'react';
 import Project from './components/projects';
+import Contact from './components/contact';
+import Link from 'next/link';
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -135,6 +137,29 @@ export default function Home() {
           yPercent:-2,
           ease: "SlowMo.easeInOut"
       })
+
+      gsap.to("#contact-h2 span", {
+        y: "0%" ,
+        duration:1.5,
+        ease:"SlowMo.easeInOut",
+        scrollTrigger:{
+          trigger: "#contact-p",
+      }
+      });
+
+      const ctcItems = gsap.utils.toArray<HTMLElement>("#contact-container div");
+
+      ctcItems.forEach((item, i)=>{
+        gsap.from(item, {
+          opacity:0,
+          duration:1.5,
+          delay:(i*4)/50,
+          ease:"SlowMo.easeInOut",
+          scrollTrigger:{
+            trigger: item,
+        }
+        });
+      });
 
 
     }, app);
@@ -276,6 +301,48 @@ export default function Home() {
         </div>
 
       </section>
+
+      <section id="contact" className={styles.contact}>
+        
+        <h2 id="contact-h2">
+          <div>
+            <span>let's connect !</span>
+          </div>
+        </h2>
+
+        <div id="contact-container" className={styles["contact-list"]}>
+          <Contact
+            src="/icons/email.svg"
+            name="Email"
+            link="mailto:loafsprout@gmail.com"
+          />
+          <Contact
+            src="/icons/resume.svg"
+            name="Resume"
+            link="https://drive.google.com/file/d/13hHa12_WNcSswIQNPhPYZahvpwF5Uph-/view?usp=sharing"
+          />
+          <Contact
+            src="/icons/twitter.svg"
+            name="Twitter"
+            link="https://twitter.com/loafsprout"
+          />
+          <Contact
+            src="/icons/instagram.svg"
+            name="Instagram"
+            link="https://instagram.com/loafsprout"
+          />
+          <Contact
+            src="/icons/github.svg"
+            name="Github"
+            link="https://github.com/meisprout"
+          />
+        </div>
+
+      </section>
+
+      <footer className={styles.footer}>
+        <p>Site designed and developed by <Link href="https://github.com/meisprout" target="_blank">meisprout</Link>.</p>
+      </footer>
 
     </main>
 

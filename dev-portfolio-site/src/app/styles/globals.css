@@ -59,6 +59,11 @@ span{
   transform:translateY(100%);
 }
 
+section{
+  border-top: 3px solid #5D3D87;
+  padding: 10rem 4rem;
+}
+
 @media only screen and (min-width:600px) {
   h1{
     font-size: 6rem;

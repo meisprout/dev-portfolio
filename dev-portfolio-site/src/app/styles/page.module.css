@@ -30,6 +30,11 @@
 
 .nav a{
   margin-left: 2rem;
+  transition: 0.5s;
+}
+
+.nav a:hover{
+  opacity:0.75;
 }
 
 .hero{
@@ -49,8 +54,6 @@
 
   .skills{
     text-align: center;
-    padding:10rem 4rem;
-    border-top: 3px solid #5D3D87;
   }
 
   .skills h2{
@@ -79,11 +82,6 @@
     height:50vh;
   }
 
-  .projects{
-    padding:10rem 4rem;
-    border-top: 3px solid #5D3D87;
-  }
-
   .projects-divcontainer{
     text-align: center;
     gap:2rem;
@@ -92,8 +90,6 @@
 
   .about{
     position: relative;
-    border-top: 3px solid #5D3D87;
-    padding: 10rem 4rem;
   }
 
   .about-image{
@@ -126,6 +122,27 @@
 
 .about p{
   margin-top:1rem;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding:2rem;
+  background-color: #5D3D87;
+  color:#F5F4EB;
+}
+
+.footer a{
+  text-decoration: underline;
+  color:#F5F4EB;
 }
 
 @media only screen and (min-width:600px) {
@@ -161,6 +178,10 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    .about{
+      padding-bottom: 20rem;
+    }
+
     .about-image{
       top:-8vw;
       left:70vw;
@@ -170,5 +191,12 @@
 
     .about-text{
       padding-right:25vw;
+    }
+
+    .contact-list{
+      display: flex;
+      align-items: center;
+      margin-top: 4rem;
+      gap:10rem;
     }
 }
