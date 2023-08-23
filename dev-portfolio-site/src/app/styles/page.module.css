@@ -7,11 +7,11 @@
     margin:1rem 0;
   }
 
-  .header, .nav{
+.header, .nav{
     align-items: center;
   }
 
-  .header{
+.header{
     display: flex;
     height:20vw;
     justify-content: space-between;
@@ -20,20 +20,20 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     background-color: #F5F4EB;
   }
 
-  .nav{
-    display: none;
-  }
+.nav{
+  display: none;
+}
 
-  .nav a{
-    margin-left: 2rem;
-  }
+.nav a{
+  margin-left: 2rem;
+}
 
-  .hero{
-    display: flex;
+.hero{
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -90,6 +90,43 @@
     margin: 4rem 0;
   }
 
+  .about{
+    position: relative;
+    border-top: 3px solid #5D3D87;
+    padding: 10rem 4rem;
+  }
+
+  .about-image{
+    position: absolute;
+    width:50vw;
+    height: min(50vw,20rem); 
+    top:0;
+    left: 1;
+    right: 0;
+    margin: 2rem auto;
+    z-index: 1;
+  }
+
+  .about-image img{
+    width: 100%; 
+    height: 100%; 
+    object-fit:contain;
+    border-radius: 1rem;
+}
+
+.about-text{
+  position: relative;
+  border: 3px solid #5D3D87;
+  border-radius: 2rem;
+  padding:2rem;
+  top:4.5rem;
+  left: 0;
+  right: 0;
+}
+
+.about p{
+  margin-top:1rem;
+}
 
 @media only screen and (min-width:600px) {
     .header{
@@ -122,5 +159,16 @@
     .projects-divcontainer{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-image{
+      top:-8vw;
+      left:70vw;
+      width:25vw;
+      height:55vw;
+    }
+
+    .about-text{
+      padding-right:25vw;
     }
 }

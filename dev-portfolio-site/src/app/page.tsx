@@ -102,6 +102,40 @@ export default function Home() {
         });
       });
 
+      gsap.to("#about-h2 span", {
+        y: "0%" ,
+        duration:1.5,
+        ease:"SlowMo.easeInOut",
+        scrollTrigger:{
+          trigger: "#about-p",
+      }
+      });
+
+      gsap.from("#about-p", { 
+        opacity:0,
+        delay:1,
+        yPercent:3,
+        scrollTrigger:{
+          trigger:"#about-p"
+        }
+      });
+
+      gsap.set("#about-image",{
+        rotation:-5,
+        yPercent:7
+      })
+
+      gsap.from("#about-image",{
+        scrollTrigger:{
+          trigger:"#about-image",
+          scrub:1
+        },
+          duration:0.5,
+          rotation:5,
+          yPercent:-2,
+          ease: "SlowMo.easeInOut"
+      })
+
 
     }, app);
     
@@ -215,8 +249,32 @@ export default function Home() {
 
       </section>
 
-      <section>
-        
+      <section id="about" className={styles.about}>
+        <div id="about-image" className={styles["about-image"]}>
+          <Image src="/images/me.png" layout='fill' alt="web design icon"/>
+        </div>
+
+        <div className={styles["about-text"]}>
+          <h2 id="about-h2">
+            <div>
+              <span>about me</span>
+            </div>
+          </h2>
+          <div id="about-p">
+            <p>
+              Hello ! I am Drey &#40;she/her&#41;, a current Computer Science major from the Philippines. I also serve as a Creative Associate for my university's supreme student council for 3 years.
+            </p>
+            
+            <p>
+              Being an artist for a long time, I am fascinated with the creative and artistic capabilities of the web and tech overall. I strongly believe that web and software interfaces should be given importance to create an impactful image, similar to a person dressing up to make a good impression. With that, I aspire to be involved on how to make interfaces enjoyable to use and look at by everyone. 
+            </p>
+
+            <p>
+              I am looking forward to work with you all !
+            </p>
+          </div>
+        </div>
+
       </section>
 
     </main>

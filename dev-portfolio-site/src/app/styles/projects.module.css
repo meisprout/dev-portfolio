@@ -13,7 +13,12 @@
     background-color: #5D3D87;
     color: #F5F4EB;
     padding: 1rem 2rem;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
+    transition: 0.5s;
+}
+
+.container a:hover{
+    transform: rotate(5deg);
 }
 
 .container ul{
@@ -25,7 +30,7 @@
 
 .container li{
     border: 3px solid #5D3D87;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     padding: 1rem;
 }
 
