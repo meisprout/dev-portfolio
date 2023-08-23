@@ -53,7 +53,7 @@ a{
   color: #5D3D87;
 }
 
-.line{
+span{
   display: inline-block;
   transform:translateY(100%);
 }

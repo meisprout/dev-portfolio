@@ -13,7 +13,7 @@ export default function Home() {
   
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      const heroItems = gsap.utils.toArray<HTMLElement>(".hero-h1 .line");
+      const heroItems = gsap.utils.toArray<HTMLElement>("#hero-h1 span");
 
       heroItems.forEach((item, i)=>{
         gsap.to(item, {
@@ -91,19 +91,19 @@ export default function Home() {
     <main id="main" ref={app} className={styles.main}>
       <section id="hero" className={styles.hero}>
 
-        <h1 class="hero-h1">
+        <h1 id="hero-h1">
           <div>
-            <span class="line">hello ! i seek to</span>
+            <span>hello ! i seek to</span>
           </div>
           <div>
-            <span class="line">develop <i>creative visuals</i></span>
+            <span>develop <i>creative visuals</i></span>
           </div>
           <div>
-            <span class="line">through code !</span>
+            <span>through code !</span>
           </div>
         </h1>
 
-        <p class="hero-p">
+        <p id="hero-p">
           I am a front-end developer based in the Philippines, interested in exploring and contributing artistic approaches in the web.
         </p>
 
@@ -111,9 +111,9 @@ export default function Home() {
 
       <section id="skills" className={styles.skills}>
 
-        <h2 class="skills-h2">
+        <h2 id="skills-h2">
           <div>
-            <span class="line">what i can do</span>
+            <span>what i can do</span>
           </div>
         </h2>
 
