@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import './styles/globals.css'
 import type { Metadata } from 'next'
 
@@ -13,7 +14,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+
+      <Head>
+        <title>Meisprout Web Developer Portfolio</title>
+        <meta name="description" content="Portfolio of a web developer from the Philippines" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <body>{children}</body>
+      
     </html>
   )
 }

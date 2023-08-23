@@ -180,6 +180,7 @@ export default function Home() {
           <a href="#contact">contact</a>
         </nav>
     </header>
+    
     <main id="main" ref={app} className={styles.main}>
       <section id="hero" className={styles.hero}>
 
