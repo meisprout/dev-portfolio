@@ -5,6 +5,7 @@
     gap:1rem;
     border: 3px solid #5D3D87;
     border-radius: 2rem;
+    margin: 2rem 0;
     padding:2rem;
 }
 
@@ -19,6 +20,7 @@
     display: flex;
     list-style: none;
     gap:0.5rem;
+    font-size: 1.5rem;
 }
 
 .container li{
@@ -40,4 +42,10 @@
     object-fit:cover;
     border: 3px solid #5D3D87;
     border-radius: 1rem;
+}
+
+@media only screen and (min-width:600px) {
+    .container ul{
+        font-size: 2rem;
+    }
 }

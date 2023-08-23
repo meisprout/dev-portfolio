@@ -208,11 +208,15 @@ export default function Home() {
             src="/images/pawbuddy.png" 
             name="Pawbuddy" 
             description="A laboratory activity remake for a hypothetical animal shelter."
-            tools={["JavaScript","SCSS/SASS","GSAP"]}
+            tools={["JavaScript","SASS","GSAP"]}
             link="https://meisprout.github.io/pawbuddy/"/>
 
         </div>
 
+      </section>
+
+      <section>
+        
       </section>
 
     </main>
