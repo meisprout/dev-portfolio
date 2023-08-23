@@ -320,7 +320,7 @@ export default function Home() {
           <Contact
             src="/icons/resume.svg"
             name="Resume"
-            link="https://drive.google.com/file/d/13hHa12_WNcSswIQNPhPYZahvpwF5Uph-/view?usp=sharing"
+            link="https://drive.google.com/file/d/1jakXNX2TQpr8UfXSm_0E5CbEc1R6J9A8/view?usp=sharing"
           />
           <Contact
             src="/icons/twitter.svg"
