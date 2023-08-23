@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useLayoutEffect, useRef } from 'react'
 import React from 'react';
+import Project from './components/projects';
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -13,6 +14,7 @@ export default function Home() {
   
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
+
       const heroItems = gsap.utils.toArray<HTMLElement>("#hero-h1 span");
 
       heroItems.forEach((item, i)=>{
@@ -27,7 +29,7 @@ export default function Home() {
         });
       });
 
-      gsap.from(".hero-p", { 
+      gsap.from("#hero-p", { 
         opacity:0,
         delay:1,
         yPercent:3,
@@ -36,22 +38,21 @@ export default function Home() {
         }
       });
 
-      gsap.set("#skills",{
-        background:"radial-gradient(50% 50% at 50% 50%, #e2cbff 0%, #F5F4EB 100%);",
-        color:"#5D3D87"
-      });
-      gsap.to("#skills", {
-        scrollTrigger: {
-          trigger: ".skills-h2",
-          start: "5%",
-          end: "center",
-          scrub: 0.25
-        },
-        background:"#5D3D87",
-        color:"#F5F4EB",
+      const skillItems = gsap.utils.toArray<HTMLElement>("#skills-container div");
+
+      skillItems.forEach((item, i)=>{
+        gsap.from(item, {
+          opacity:0,
+          duration:1.5,
+          delay:(i*2)/50,
+          ease:"SlowMo.easeInOut",
+          scrollTrigger:{
+            trigger: item,
+        }
+        });
       });
 
-      gsap.to(".skills-h2 .line", {
+      gsap.to("#skills-h2 span", {
         y: "0%" ,
         duration:1,
         ease:"SlowMo.easeInOut",
@@ -60,13 +61,45 @@ export default function Home() {
       }
       });
 
-      gsap.from(".skills-p", { 
+      gsap.from("#skills-p", { 
         opacity:0,
         delay:1,
         yPercent:3,
         scrollTrigger:{
           trigger:"#skills"
         }
+      });
+
+      gsap.to("#projects-h2 span", {
+        y: "0%" ,
+        duration:1.5,
+        ease:"SlowMo.easeInOut",
+        scrollTrigger:{
+          trigger: "#projects-p",
+      }
+      });
+
+      gsap.from("#projects-p", { 
+        opacity:0,
+        delay:1,
+        yPercent:3,
+        scrollTrigger:{
+          trigger:"#projects-container"
+        }
+      });
+
+      const projItems = gsap.utils.toArray<HTMLElement>("#projects-container div");
+
+      projItems.forEach((item, i)=>{
+        gsap.from(item, {
+          opacity:0,
+          duration:1.5,
+          delay:(i*4)/50,
+          ease:"SlowMo.easeInOut",
+          scrollTrigger:{
+            trigger: item,
+        }
+        });
       });
 
 
@@ -79,11 +112,11 @@ export default function Home() {
     <>
     <header className={styles.header}>
         <div className={styles.logo}>
-            <Image src="/images/logo.svg" layout='fill' alt="meisprout logo"/>
+            <Image src="/icons/logo.svg" layout='fill' alt="meisprout logo"/>
         </div>
         <nav className={styles.nav}>
           <a href="#skills">skills</a>
-          <a href="#works">works</a>
+          <a href="#projects">projects</a>
           <a href="#about">about</a>
           <a href="#contact">contact</a>
         </nav>
@@ -113,15 +146,15 @@ export default function Home() {
 
         <h2 id="skills-h2">
           <div>
-            <span>what i can do</span>
+            <span>What I can do</span>
           </div>
         </h2>
 
-        <div className={styles["skills-divcontainer"]}>
+        <div id="skills-container" className={styles["skills-divcontainer"]}>
 
           <div className={styles["skills-div"]}>
             <div className={styles["skills-icons"]}>
-                <Image src="/images/webdev.svg" layout='fill' alt="web development icon"/>
+                <Image src="/icons/webdev.svg" layout='fill' alt="web development icon"/>
             </div>
             <h3>Web Development</h3>
             <p>From building elements with JavaScript frameworks and animating with GSAP, I can develop fully-functional and flexible interfaces in the web.</p>
@@ -129,15 +162,61 @@ export default function Home() {
 
           <div className={styles["skills-div"]}>
             <div className={styles["skills-icons"]}>
-                <Image src="/images/webdes.svg" layout='fill' alt="web design icon"/>
+                <Image src="/icons/webdes.svg" layout='fill' alt="web design icon"/>
             </div>
             <h3>Web Design</h3>
             <p>I can design visually appealing web interfaces with the help of my extensive experience in the creative field.</p>
           </div>
 
         </div>
+
       </section>
+        
+      <section id="projects" className={styles.projects}>
+
+        <h2 id="projects-h2">
+          <div>
+            <span>Projects</span>
+          </div>
+        </h2>
+        <p id="projects-p">Some projects are not included for confidentiality purposes.</p>
+
+        <div id="projects-container" className={styles["projects-divcontainer"]}>
+
+            <Project 
+              src="/images/wheeinday.png" 
+              name="Wheein Day 2023" 
+              description="A tribute for Jung Wheein&#39;s birthday."
+              tools={["NextJS","CSS","GSAP"]}
+              link="https://wheeinday2023.vercel.app"/>
+
+            <Project 
+              src="/images/mmmplus.png" 
+              name="Mamamoo+ fansite" 
+              description="A hypothetical theater site inspired by Act 1 Scene 1 album."
+              tools={["NextJS","CSS","GSAP"]}
+              link="https://mmmplus.vercel.app"/>
+
+            <Project 
+              src="/images/artportfolio.png" 
+              name="Loafsprout Art Portfolio" 
+              description="A collection of art and commission information with Notion API integration."
+              tools={["NextJS","CSS","GSAP"]}
+              link="https://loafsprout.vercel.app"/>
+
+            <Project 
+            src="/images/pawbuddy.png" 
+            name="Pawbuddy" 
+            description="A laboratory activity remake for a hypothetical animal shelter."
+            tools={["JavaScript","SCSS/SASS","GSAP"]}
+            link="https://meisprout.github.io/pawbuddy/"/>
+
+        </div>
+
+      </section>
+
     </main>
+
     </>
     
   )
