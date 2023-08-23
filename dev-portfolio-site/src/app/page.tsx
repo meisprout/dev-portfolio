@@ -5,10 +5,11 @@ import styles from './styles/page.module.css'
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useLayoutEffect, useRef } from 'react'
+import React from 'react';
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
-  const app = useRef();
+  const app = React.useRef<HTMLInputElement>(null);
   
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
