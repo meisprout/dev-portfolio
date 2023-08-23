@@ -78,7 +78,7 @@ export default function Home() {
     <>
     <header className={styles.header}>
         <div className={styles.logo}>
-            <Image src="/images/logo.svg" layout='fill'/>
+            <Image src="/images/logo.svg" layout='fill' alt="meisprout logo"/>
         </div>
         <nav className={styles.nav}>
           <a href="#skills">skills</a>
@@ -120,7 +120,7 @@ export default function Home() {
 
           <div className={styles["skills-div"]}>
             <div className={styles["skills-icons"]}>
-                <Image src="/images/webdev.svg" layout='fill'/>
+                <Image src="/images/webdev.svg" layout='fill' alt="web development icon"/>
             </div>
             <h3>Web Development</h3>
             <p>From building elements with JavaScript frameworks and animating with GSAP, I can develop fully-functional and flexible interfaces in the web.</p>
@@ -128,7 +128,7 @@ export default function Home() {
 
           <div className={styles["skills-div"]}>
             <div className={styles["skills-icons"]}>
-                <Image src="/images/webdes.svg" layout='fill'/>
+                <Image src="/images/webdes.svg" layout='fill' alt="web design icon"/>
             </div>
             <h3>Web Design</h3>
             <p>I can design visually appealing web interfaces with the help of my extensive experience in the creative field.</p>
