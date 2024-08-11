@@ -1,27 +1,29 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin:2rem;
+.input{
+    background-color: #F5F4EB!important;
+    border:3px solid #5D3D87;
+    width:25rem;
 }
 
-.image{
-    position: relative;
-    width:10rem;
-    height: 10rem; 
-    transition: 0.5s;
+.contact-details{
+    width:50%;
+    border-right: 3px solid #5D3D87;
 }
 
-.image:hover{
-    transform: rotate(25deg);
+.form{
+    width: 65%;
 }
 
-@media only screen and (min-width:600px) {
-    .container{
-        margin:0;
+.textarea{
+    width:40rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .contact-details{
+        width:100%;
+        border-right: 0;
+        border-bottom:3px solid #5D3D87;
     }
-    .image{
-        width:15vw;
-        height: 8vw; 
+    .form, .input, .textarea{
+        width: 100%;
     }
-}
+  }

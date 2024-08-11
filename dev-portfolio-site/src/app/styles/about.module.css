@@ -1,0 +1,44 @@
+.about{
+    padding-top:4rem;
+    border-bottom: 3px solid #5D3D87;
+}
+.img-container{
+    width:35vw;
+    padding:3rem;
+}
+
+.text{
+    border-left: 3px solid #5D3D87;
+    min-height:45vw;
+    width: 75vw;
+    padding:3rem;
+}
+
+.skills{
+    border: 3px solid #5D3D87;
+    border-radius: 15px;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+@media only screen and (max-width: 900px) {
+    .img-container{
+        width:55vw;
+        height:45vh;
+    }
+    
+    .text{
+        border-left: 0;
+        border-top:3px solid #5D3D87;
+        min-height:auto;
+        width: auto;
+        padding:3rem;
+    }
+
+    .skills-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }

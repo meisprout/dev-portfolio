@@ -1,0 +1,7 @@
+.experience{
+    border-bottom: 3px solid #5D3D87;
+}
+
+.sparkle-bullet{
+    filter: invert(27%) sepia(22%) saturate(1598%) hue-rotate(224deg) brightness(96%) contrast(92%);
+}
