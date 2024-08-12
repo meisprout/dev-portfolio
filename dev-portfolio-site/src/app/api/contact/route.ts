@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         <p>Message:</p> 
         <p>${message}</p>
         <br>
-        <p>Sent from <a href="https://maala-practicum-portfolio.vercel.app/">maala-practicum-portfolio.vercel.app</a></p>
+        <p>Sent from <a href="https://eahxmei.vercel.app/">eahxmei.vercel.app</a></p>
       `,
     });
 
